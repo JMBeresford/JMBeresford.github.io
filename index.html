@@ -4,162 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="reset.css">
-    <title>~ sweet ~</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <title>a.out</title>
+
+    <script>
+        function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+        </script>
 </head>
 
-<body>
-    <div id="outer">
-        <div id="middle">
+<body onload="startTime()">
+    <div class="container">
+        <div class="row">
 
-            <div id="themes">
-                <button class="button" type="button" onclick="cycleThemes()">cycle_themes</button> 
+            <div class="col-auto terminal-screen">
+                <div class="row">
+                    <!-- username with cursor -->
+                    <div class="col-12">
+                        <div class="output">
+                            <p class="unix-user">jberesford</p>
+                            <p class="unix-syntax1">@</p>
+                            <p class="PC-name">volcaus.com:</p>
+                            <p class="unix-syntax2">~/main</p>
+                            <p class="cmd">$ ./startpage.sh</p>
+                        </div>
+                    </div>
+
+                    <!-- links with sections -->
+                    <div class="links-container col-12">
+                        <ul class="hyperlinks">
+                            <li><div id="clock"></div></li>
+                            <li><a href="mailto:jberesford@volcaus.com">email_me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--inner-->
+
+            <div class="terminal-screen col-auto">
+                <div class="row">
+                    <!-- username with cursor -->
+                    <div class="output col-12">
+                        <p class="unix-user">jberesford</p>
+                        <p class="unix-syntax1">@</p>
+                        <p class="PC-name">volcaus.com:</p>
+                        <p class="unix-syntax2">~/social</p>
+                        <p class="cmd">$ ls</p>
+                    </div>
+
+                    <!-- links with sections -->
+                    <div class="links-container col-12">
+                        <ul class="hyperlinks">
+                            <li><a href="https://discord.com/app">discord</a></li>
+                            <li><a href="https://reddit.com">reddit</a></li>
+                            <li><a href="https://linkedin.com">linked_in</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--inner-->
+
+            <div class="col-auto terminal-screen">
+                <div class="row">
+                    <!-- username with cursor -->
+                    <div class="col-12">
+                        <div class="output">
+                            <p class="unix-user">jberesford</p>
+                            <p class="unix-syntax1">@</p>
+                            <p class="PC-name">volcaus.com:</p>
+                            <p class="unix-syntax2">~/academics</p>
+                            <p class="cmd">$ ls</p>
+                        </div>
+                    </div>
+
+                    <!-- links with sections -->
+                    <div class="links-container col-12">
+                        <ul class="hyperlinks">
+                            <li><a href="https://portal.mycod.us/">my_cod</a></li>
+                            <li><a href="https://my.ucsc.edu/">my_ucsc</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--inner-->
+
+            <div class="col-auto terminal-screen">
+                <div class="row">
+                    <!-- username with cursor -->
+                    <div class="col-12">
+                        <div class="output">
+                            <p class="unix-user">jberesford</p>
+                            <p class="unix-syntax1">@</p>
+                            <p class="PC-name">volcaus.com:</p>
+                            <p class="unix-syntax2">~/utilities</p>
+                            <p class="cmd">$ ls</p>
+                        </div>
+                    </div>
+
+                    <!-- links with sections -->
+                    <div class="links-container col-12">
+                        <ul class="hyperlinks">
+                            <li><a href="https://gmail.com">gmail</a></li>
+                            <li><a href="https://keep.google.com">google_keep</a></li>
+                            <li><a href="https://drive.google.com">google_drive</a></li>
+                            <li><a href="https://calendar.google.com">google_calendar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--inner-->
+
+            <div class="col-auto terminal-screen">
+                <div class="row">
+                    <!-- username with cursor -->
+                    <div class="col-12">
+                        <div class="output">
+                            <p class="unix-user">jberesford</p>
+                            <p class="unix-syntax1">@</p>
+                            <p class="PC-name">volcaus.com:</p>
+                            <p class="unix-syntax2">~/media</p>
+                            <p class="cmd">$ ls</p>
+                        </div>
+                    </div>
+
+                    <!-- links with sections -->
+                    <div class="links-container col-12">
+                        <ul class="hyperlinks">
+                            <li><a href="https://play.google.com/music">google_play_music</a></li>
+                            <li><a href="https://youtube.com">youtube</a></li>
+                            <li><a href="https://app.plex.tv/desktop">plex</a></li>
+                            <li><a href="https://twitch.tv/">twitch</a></li>
+                            <li><a href="https://hulu.com/">hulu</a></li>
+                            <li><a href="https://netflix.com/">netflix</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--inner-->
+
+        </div><!-- row1 -->
+
+        <!--
+        <div class="row">
+
+            <div class="terminal-screen output col-auto">
+                <p class="unix-user">search</p>
+                <p class="unix-syntax1">@</p>
+                <p class="PC-name">google.com</p>
+                <p class="unix-syntax2">~/db$&nbsp;</p>
+                <p class="cmd">./search.sh&nbsp;</p>
+                <form id="search-bar" method="get" action="http://google.com/search">
+                    <input type="text" name="q" placeholder="" autofocus />
+                </form>
             </div>
 
-            <div class="terminal-screen" id="inner">
-                <!-- username with cursor -->
-                <div class="user">
-                    <a class="unix-user">Kevin</a>
-                    <a class="unix-syntax1">@</a>
-                    <a class="PC-name">KevinDesktop</a>
-                    <a class="unix-syntax2">&#126;</a>
-                    <!--  <a class="cursor">|</a> -->
-                </div>
-
-                <!-- links with sections -->
-                <div class="links-container">
-                    <div class="main">
-                        <ul class="hyperlinks">
-                            <li id="main-h">main</li>
-                            <li class="separators">-----personal----</li>
-                            <li><a href="https://kevin-nel.github.io/">my_blog</a></li>
-                            <li><a href="https://github.com/kevin-nel">my_github</a></li>
-                            <li><a href="http://geocities.ws/kevinnel/">my_geocities</a></li>
-                            <li class="separators">---productivity--</li>
-                            <li><a href="https://mail.tutanota.com/calendar/">tutanota_calendar</a></li>
-                            <li><a href="https://mail.tutanota.com/mail/">tutanota_mail</a></li>
-                            <li><a href="https://mail.protonmail.com/inbox">protonmail</a></li>
-                            <li class="separators">-----utillity----</li>
-                            <li><a href="http://localhost:8384/">syncthing</a></li>
-                            <li><a href="https://librespeed.org/">speedtest</a></li>
-                            <li class="separators">-----fun_stuff----</li>
-                            <li><a href="https://www.xkcd.com/">xkcd</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="social">
-                        <ul class="hyperlinks">
-                            <li id="social-h">social</li>
-                            <li><a href="https://www.youtube.com/">youtube</a></li>
-                            <li><a href="https://www.reddit.com/">reddit</a></li>
-                            <li><a href="https://www.instagram.com/">instagram</a></li>
-                            <li><a href="https://web.whatsapp.com/">whatsapp</a></li>
-                            <li><a href="https://twitter.com/">twitter</a></li>
-                            <li><a href="https://www.facebook.com/">facebook</a></li>
-                            <li><a href="https://www.netflix.com/">netflix</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="tech">
-                        <ul class="hyperlinks">
-                            <li id="tech-h">tech</li>
-                            <li><a href="https://www.youtube.com/user/Computerphile">&lt;computerphile&gt;</a></li>
-                            <li><a href="http://distrowatch.com/">distrowatch</a></li>
-                            <li><a href="https://www.reddit.com/r/unixporn/">r/unixporn</a></li>
-                            <li><a href="https://www.reddit.com/r/battlestations/">r/battlestations</a></li>
-                            <li><a href="https://www.reddit.com/r/MechanicalKeyboards/">r/mk</a></li>
-                            <li><a href="https://news.ycombinator.com/">hacker_news</a></li>
-                            <li><a href="https://hackaday.com/">hackaday</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="varsity">
-                        <ul class="hyperlinks">
-                            <li id="varsity-h">university</li>
-                            <li><a href="https://duckduckgo.com/?t=ffab&q=my+university+site&ia=web">uni_portal</a></li>
-                            <li class="separators">----cloud_tools-----</li>
-                            <li><a href="https://mail.google.com">g_mail</a></li>
-                            <li><a href="https://calendar.google.com/calendar/">g_calendar</a></li>
-                            <li><a href="https://drive.google.com/drive/my-drive">g_drive</a></li>
-                            <li class="separators">------reports-------</li>
-                            <li><a href="https://v2.overleaf.com/">overleaf</a></li>
-                            <li><a href="http://www.citationmachine.net/bibtex/cite-a-website">BibTeX_web_citations</a></li>
-                            <li><a href="https://www.office.com/?auth=1">ms_office_online</a></li>
-                            <li class="separators">-----study_music----</li>
-                            <li><a href="https://www.youtube.com/results?search_query=lofi+hip+hop">lofi_hip-hop</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="programming">
-                        <ul class="hyperlinks">
-                            <li id="programming-h">programming</li>
-                            <li><a href="https://code-golf.io/">code_golf</a></li>
-                            <li><a href="http://www.vimgolf.com/">vimgolf</a></li>
-                            <li><a href="https://www.codepen.io/">codepen.io</a></li>
-                            <li><a href="https://picoctf.com/">picoCTF</a></li>
-                            <li><a href="https://www.learn-c.org/">picoCTF</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- <div class="music"> 
-                            <ul class="hyperlinks">
-                                <li id="music-h">music</li>
-                                <li><a href="">empty_link</a></li>
-                                <li><a href="">empty_link</a></li>
-                                <li><a href="">empty_link</a></li>
-                        </ul>
-                    </div>
-                    -->
-
-                    <!--                    
-                    <div class="media">
-                        <ul class="hyperlinks">
-                            <li id="media-h">media</li>
-                            <li><a href="https://unsplash.com/">unsplash</a></li>
-                            <li><a href="https://videos.pexels.com/">pexels_video</a></li>
-                        </ul>
-                    </div>
-                    -->
-
-                    <div class="gaming">
-                        <ul class="hyperlinks">
-                            <li id="gaming-h">shopping</li>
-                            <li class="separators">-----games----</li>
-                            <li><a href="https://store.steampowered.com//">steam</a></li>
-                            <li><a href="https://www.humblebundle.com/">humble_bundle</a></li>
-                            <li><a href="https://www.gog.com/">gog</a></li>
-                            <li class="separators">-----pc_parts----</li>
-                            <li><a href="https://pcpartpicker.com/">pc_part_picker</a></li>
-                            <li class="separators">-----general----</li>
-                            <li><a href="https://www.amazon.com/">amazon</a></li>
-                        </ul>
-                    </div>
-
-                </div><!-- inner -->
-
-                <!-- search with duckduckgo-->
-                <div id="search">
-                    <a class="unix-user">Search</a>
-                    <a class="unix-syntax1">@</a>
-                    <a class="PC-name">DuckDuckGo.com</a>
-                    <a class="unix-syntax2">&#126;</a>
-                    <form id="search-bar" method="get" action="http://duckduckgo.com/">
-                        <input type="text" name="q" placeholder="" autofocus />
-                    </form>
-                </div>
-
-            </div><!-- middle -->
-           
-           <!-- music stuff to add
-            <div class="music-embed">
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/327432184&color=%23c75457&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            </div>
-            -->
         </div>
+        -->
+
     </div><!-- outer -->
-    <script src="themes.js"></script>
+
+
 </body>
 
 </html>

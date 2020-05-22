@@ -1,52 +1,21 @@
 :root {
-    --base04:black;
-    --base03: grey;
-    --base02: grey;
-    --dark1: grey;
-    --dark2: grey;
-    --base01: grey;
-    --base00: grey;
-    --base0: grey;
-    --base1: grey;
-    --base2: white;
-    --base3: white;
-    --red: red;
-    --green: green;
-    --yellow: yellow;
-    --blue: blue;
-    --magenta: magenta;
-    --cyan: cyan;
-    --orange: orange;
-}
-
-
-@media (max-width: 500px) {
-    .links-container {
-        flex-direction: column !important;
-        order: 2 !important;        
-        /* width: 100vw !important;  */
-    }
-    .terminal-screen{
-        border: none !important;
-    }
-    #search {
-        order: 1 !important;
-    }
-
-    #middle {
-        vertical-align: none !important;
-    }
-
-    #inner {
-        margin-left: 0  !important;
-        margin-right: 0  !important;
-    }
-
-    .user {
-        order: 0 !important;
-    }
-
-
+    --base03: #0f0f0f;
+    --base02: #5c5c5c;
+    --base01: #000000;
+    --base00: #1f2353;
+    --base04: #313131;
+    --base0: #656896;
+    --base1: #8283c2;
+    --base2: #87a3c2;
+    --base3: #7274e2;
+    --yellow: #92bed5;
+    --orange: #d2e9f1;
+    --red: #8f8481;
+    --magenta: #d84f30;
+    --violet: #87aa64;
+    --blue: #ffe69b;
+    --cyan: #4b698a;
+    --green: #e09a9a;
 }
 
 /* elements */
@@ -54,111 +23,48 @@ body {
     background-color: var(--base03);
     font-family: "Lucidia Console", monospace;
     color: var(--base0);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 ul {
-    list-style-position: inside;
-    list-style-type: "";
+    padding: 0;
+    list-style-type: none;
 }
 
 input {
-    background-color: var(--base03);
+    background-color: transparent;
     caret-color: var(--base0);
     outline: none;
     border: none;
     color: var(--base0);
     font-family: "Lucidia Console", monospace;
-    font-size: 16px;
-    padding-left: 5px;
+    font-size: 12px;
+    padding-bottom: 3px;
 }
 
 .terminal-screen {
-    overflow: hidden;
-    border: 5px solid var(--base00);
-    padding: 5px;
-    
+    display: inline-block;
+    vertical-align: top;
+    background-color: var(--base01);
+    border: 2px solid var(--base04);
+    margin: 5px;
+    padding-top: 2px;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: left;
 }
-
-#outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-#middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-}
-
 
 #search {
-    display: flex;
-    width: 100%;
-    order: 2;
+    display: inline;
 }
 
 #search-bar {
-    order: 4;
-    overflow: hidden;
-    background: var(--base03);
+    background-color: var(--base01);
     font-family: "Lucidia Console", monospace;
-    display: flex;
-}
-
-.music-embed{
-    width: 50%;
-    padding: 10px 10px 10px 10px;
-    margin: 0 auto; /* centering */
 }
 
 .links-container {
-    order: 1;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 30%;
-    padding: 10px;
-    justify-content: space-around;
-}
-
-.main,
-.tech,
-.social,
-.varsity,
-.media,
-.programming,
-.gaming {
-    width: auto;
-    position: relative;
-    padding: 10px;
-    transition: background-color 0.3s;
-    color: var(--cyan);
-}
-
-.main:hover,
-.tech:hover,
-.social:hover,
-.varsity:hover,
-.media:hover,
-.programming:hover,
-.gaming:hover {
-    background-color: var(--base03);
-}
-
-.main {
-    order: 0;
-}
-
-.social {
-    order: 1;
+    justify-content: left;
 }
 
 .varsity {
@@ -190,7 +96,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--cyan);
+    color: var(--base1);
     text-decoration: none;
 }
 
@@ -201,29 +107,28 @@ a:active {
 
 /* "syntax highlighting" */
 
-.user {
+.output {
     display: flex;
-    order: 0;
 }
 
 .unix-user {
-    color: var(--orange);
-    order: 0;
+    color: var(--base2);
 }
 
 .unix-syntax1 {
-    color: var(--base0);
-    order: 1;
+    color: var(--base02);
 }
 
 .PC-name {
-    color: var(--blue);
-    order: 2;
+    color: var(--base2);
 }
 
 .unix-syntax2 {
-    color: var(--base0);
-    order: 3;
+    color: var(--base02);
+}
+
+.cmd {
+    color: white;
 }
 
 /* blinking cursor */
@@ -240,49 +145,6 @@ a:active {
     }
 }
 
-/* section headings */
-
-#main-h, #varsity-h, #social-h, #tech-h, #programming-h, #media-h, #gaming-h{
-    font-weight: bold;
-
-}
-#main-h {
-    color: var(--magenta);
-}
-
-#varsity-h {
-    color: var(--green);
-}
-
-#social-h {
-    color: var(--orange);
-}
-
-#tech-h {
-    color: var(--cyan);
-}
-
-#programming-h {
-    color: var(--red);
-}
-
-#media-h {
-    color: var(--yellow);
-}
-
-#gaming-h {
-    color: var(--blue);
-}
-
-#themes {
-    background-color: var(--base03);
-    border: none;
-}
-
-.separators {
-    color: var(--base01);
-}
-
 .button{
     background-color: transparent;
     border: 0;
@@ -296,7 +158,7 @@ a:active {
     top: 0;
     right: 0;
 }
-  
+
 .button:hover {
     background-color: var(--base00);
     color: var(--base03);
