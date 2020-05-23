@@ -19,19 +19,22 @@
 
     <script>
         function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('clock').innerHTML =
-        h + ":" + m + ":" + s;
-        var t = setTimeout(startTime, 500);
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var M = today.getMonth();
+            var D = today.getDay();
+            var Y = today.getFullYear();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('date').innerHTML = M + "/" + D + "/" + Y;
+            document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
         }
         function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
         }
         </script>
 </head>
@@ -56,8 +59,8 @@
                     <!-- links with sections -->
                     <div class="links-container col-12">
                         <ul class="hyperlinks">
+                            <li><div id="date"></li>
                             <li><div id="clock"></div></li>
-                            <li><a href="mailto:jberesford@volcaus.com">email_me</a></li>
                         </ul>
                     </div>
                 </div>
@@ -123,11 +126,18 @@
 
                     <!-- links with sections -->
                     <div class="links-container col-12">
+                        <p class="seperator">--google_services--</p>
                         <ul class="hyperlinks">
                             <li><a href="https://gmail.com">gmail</a></li>
                             <li><a href="https://keep.google.com">google_keep</a></li>
                             <li><a href="https://drive.google.com">google_drive</a></li>
                             <li><a href="https://calendar.google.com">google_calendar</a></li>
+                        </ul>
+                        <p class="seperator">--media_services--</p>
+                        <ul class="hyperlinks">
+                            <li><a href="#">sonarr</a></li>
+                            <li><a href="#">radarr</a></li>
+                            <li><a href="#">ombi</a></li>
                         </ul>
                     </div>
                 </div>
@@ -148,10 +158,15 @@
 
                     <!-- links with sections -->
                     <div class="links-container col-12">
+                        <p class="seperator">--audio_platforms--</p>
                         <ul class="hyperlinks">
-                            <li><a href="https://play.google.com/music">google_play_music</a></li>
-                            <li><a href="https://youtube.com">youtube</a></li>
                             <li><a href="https://app.plex.tv/desktop">plex</a></li>
+                            <li><a href="https://play.google.com/music">google_play_music</a></li>
+                            <li><a href="https://spotify.com">spotify</a></li>
+                        </ul>
+                        <p class="seperator">--video_platforms--</p>
+                        <ul class="hyperlinks">
+                            <li><a href="https://youtube.com">youtube</a></li>
                             <li><a href="https://twitch.tv/">twitch</a></li>
                             <li><a href="https://hulu.com/">hulu</a></li>
                             <li><a href="https://netflix.com/">netflix</a></li>
